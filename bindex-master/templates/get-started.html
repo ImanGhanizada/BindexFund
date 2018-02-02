@@ -1,0 +1,372 @@
+{% include 'modules/onboarding-head.html' %}
+
+<body>
+    <main>
+
+        <nav class="menu-navbar">
+            <div class="container">
+                <ul class="nav navbar-nav" style="width:100%">
+                    <li class="active">
+                        <a href="/" class="navbar-brand">
+                            <img style="width: 150px !important;height: auto;" src="../static/img/logo/logo-word-full.png">
+                        </a>
+                    </li>
+                    <li class="get-started-login-header" style="float:right">
+                        <a href="http://admin.bindexfund.com">
+                            <button style="border-radius: 0px;background-color: #428bca;border-color: #357ebd;background-color: rgb(2, 91, 154);" type="button" class="btn btn-primary">Login</button>
+                        </a>
+                    </li>
+                </ul>
+                <div class="sub-menu">
+                    <p style="font-size:11px; padding-left:12px"><strong>Introduce Yourself</strong> > Get Your Plan > Open Your Account</p>
+
+                </div>
+                <!-- <ul class="nav navbar-nav navbar-right login-button">
+                        <li><a href="/">Default</a></li>
+                    </ul> -->
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+        <!-- <div class="sub-menu">
+          Assess Your Risk Tolerance > View Your Plan > Open Account
+        </div> -->
+        <!-- <section style="padding-top:3em" style='background-image: url("../static/img/bg/header-bg.png"); height: calc(100vh - 75px);'> -->
+        <section style="padding-top:7em">
+            <div class="container g-z-index-1">
+                <div class="shell-container">
+                    <div id="wizard">
+                        <div class="wizard-header">
+                            <div class="muted-text">Let's get to know you</div>
+                        </div>
+
+                        <div id="rootwizard">
+                            <div class="navbar">
+                                <div class="navbar-inner">
+                                    <div class="container">
+                                        <ul>
+                                            <li><a href="#tab1" data-toggle="tab">First</a></li>
+                                            <li><a href="#tab2" data-toggle="tab">Second</a></li>
+                                            <li><a href="#tab3" data-toggle="tab">Third</a></li>
+                                            <li><a href="#tab4" data-toggle="tab">Fourth</a></li>
+                                            <li><a href="#tab5" data-toggle="tab">Fifth</a></li>
+                                            <li><a href="#tab6" data-toggle="tab">Sixth</a></li>
+                                            <li><a href="#tab7" data-toggle="tab">Seventh</a></li>
+                                            <li><a href="#tab8" data-toggle="tab">Eighth</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="bar" class="progress">
+                                <div style="background-color: #025b9a" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                            </div>
+                            <form id="questions-form">
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="tab1">
+                                        <div class="spacing-question">
+                                            <div class="question-title">How would you describe your current knowledge of cryptocurrency and blockchain technology?</div>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="knowledge-little-but-curious" class="option-text">
+                                              <input id="knowledge-little-but-curious" name="question-knowledge" type="radio" value="0">
+                                              Very little to no knowledge, but i'm curious to learn
+                                            </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="knowledge-need-examples" class="option-text">
+                                              <input id="knowledge-need-examples" name="question-knowledge" type="radio" value="0">
+                                              I've read and understand a bit, but i'd like to see use-cases
+                                            </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="knowledge-enthusiast-excited" class="option-text">
+                                              <input id="knowledge-enthusiast-excited" name="question-knowledge" type="radio" value="0">
+                                              I'm an avid enthusiast and believe the technology will change everything
+                                            </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="knowledge-investment-only" class="option-text">
+                                              <input id="knowledge-investment-only" name="question-knowledge" type="radio" value="0">
+                                              Other / I'm just interested in investing, not so much the technology.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab2">
+                                        <div class="spacing-question">
+                                            <div class="question-title">What is your primary reason for investing in cryptocurrency?</div>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="reason-miss-out" class="option-text">
+                                              <input id="reason-miss-out" name="question-reason" type="radio" value="0">
+                                              I don't want to miss out
+                                            </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="reason-emerging-opportunity" class="option-text">
+                                              <input id="reason-emerging-opportunity" name="question-reason" type="radio" value="0">
+                                              I see an opportunity in an emerging market
+                                            </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="reason-diversify" class="option-text">
+                                              <input id="reason-diversify" name="question-reason" type="radio" value="0">
+                                              To diversify my investment portfolio.
+                                            </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="reason-other" class="option-text">
+                                              <input id="reason-other" name="question-reason" type="radio" value="0">
+                                              Other
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab3">
+                                        <div class="spacing-question">
+                                            <div class="question-title">How old are you?</div>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <select class="form-control" style="width:10em" name="age">
+                                                <option value="">Age</option>
+                                                <option value="9">18-35</option>
+                                                <option value="7">35-45</option>
+                                                <option value="5">45-55</option>
+                                                <option value="3">55-65</option>
+                                                <option value="1">65+</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab4">
+                                        <div class="spacing-question">
+                                            <div class="question-title">What is your annual pre-tax income?</div>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <select class="form-control" style="width:12em" name="income">
+                                              <option value="">Income</option>
+                                              <option value="1">$0 - $50,000</option>
+                                              <option value="3">$50,000 - $100,000</option>
+                                              <option value="5">$100,000 - $150,000</option>
+                                              <option value="7">$150,000 - $250,000</option>
+                                              <option value="9">$250,000 +</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab5">
+                                        <div class="spacing-question">
+                                            <div class="question-title">How would you describe your household?</div>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="household-single-no-dependents" class="option-text">
+                                              <input id="household-single-no-dependents" name="household-description" type="radio" value="7">
+                                              Single income, no dependents
+                                            </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="household-single-one-dependents" class="option-text">
+                                              <input id="household-single-one-dependents" name="household-description" type="radio" value="3">
+                                              Single income, at least one dependent
+                                            </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="household-dual-income-no-dependents" class="option-text">
+                                              <input id="household-dual-income-no-dependents" name="household-description" type="radio" value="9">
+                                              Dual income, no dependents
+                                            </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="household-dual-income-with-dependent" class="option-text">
+                                              <input id="household-dual-income-with-dependent" name="household-description" type="radio" value="6">
+                                              Dual income, at least one dependent
+                                            </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="household-financially-independent" class="option-text">
+                                              <input id="household-financially-independent" name="household-description" type="radio" value="1">
+                                              Retired or financially independent
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab6">
+                                        <div class="spacing-question">
+                                            <div class="question-title">What is your best guess of your liquid savings total value (e.g. CDs, mutual funds, IRAs, 401(k)s, stocks)?</div>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <select class="form-control" style="width:15em" name="savings-total">
+                                              <option value="">Total Savings</option>
+                                              <option value="1">$0 - $10,000</option>
+                                              <option value="2">$10,000 - $50,000</option>
+                                              <option value="3">$50,000 - $100,000</option>
+                                              <option value="4">$100,000 - $150,000</option>
+                                              <option value="5">$150,000 - $250,000</option>
+                                              <option value="6">$250,000 - $500,000</option>
+                                              <option value="7">$500,000 - $1,000,000</option>
+                                              <option value="8">$1,000,000 - $10,000,000</option>
+                                              <option value="9">$10,000,000 +</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab7">
+                                        <div class="spacing-question">
+                                            <div class="question-title">When investing your money, what do you care mostly about?</div>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="care-maximizing-gains" class="option-text">
+                                              <input id="care-maximizing-gains" name="care-about-investing" type="radio" value="8">
+                                              Maximizing gains
+                                            </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="care-minimizing-loss" class="option-text">
+                                              <input id="care-minimizing-loss" name="care-about-investing" type="radio" value="1">
+                                              Minimizing losses
+                                            </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="care-both" class="option-text">
+                                              <input id="care-both" name="care-about-investing" type="radio" value="5">
+                                              I care about both
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="tab8">
+                                        <div class="spacing-question">
+                                            <div class="question-title">The cryptocurrency market is relatively new and can be unpredictable at times. If your investment portfolio lost 15% of its value over a month, what would you do?</div>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="scenario-sell-all" class="option-text">
+                                              <input id="scenario-sell-all" name="caution-scenario" type="radio" value="1">
+                                               Sell a large portion, or all of my investments
+                                             </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="scenario-sell-some" class="option-text">
+                                              <input id="scenario-sell-some" name="caution-scenario" type="radio" value="4">
+                                              Sell a small amount
+                                            </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="scenario-hold" class="option-text">
+                                              <input id="scenario-hold" name="caution-scenario" type="radio" value="6">
+                                               Hold and stay the course
+                                             </label>
+                                        </div>
+                                        <div class="spacing-option">
+                                            <label for="scenario-invest-more" class="option-text">
+                                              <input id="scenario-invest-more" name="caution-scenario" type="radio" value="9">
+                                               Invest more
+                                             </label>
+                                        </div>
+                                    </div>
+                                    <ul class="pager wizard" style="margin: 0px 0;">
+                                        <p id="error-message"></p>
+                                        <li class="previous"><a href="#">Back</a></li>
+                                        <li class="next"><a href="#">Continue</a></li>
+                                        <li class="finish hidden"><a href="#">Get My Plan</a></li>
+                                    </ul>
+                                </div>
+                            </form>
+                            <p style="font-size: 11px;padding-top:5px;">* We value your privacy as our own. We will never share this information with any third parties. The data is only used to calculate a hypothetical risk tolerance score.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% include 'modules/footer.html' %}
+
+    </main>
+
+</body>
+</html>
+
+
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="../static/js/smartWizard.js"></script>
+<script src="../static/js/charts.js"></script>
+
+<!-- <script src="http://vinceg.github.io/twitter-bootstrap-wizard/bootstrap/js/bootstrap.min.js"></script> -->
+<script src="../static/vendor/bootstrap/bootstrap-3.3.js"></script>
+<script src="../static/vendor/popper.min.js"></script>
+<!-- <script src="../static/js/getStarted.js"></script> -->
+
+
+<script>
+    $(document).ready(function() {
+
+        var tabContents = {}
+
+        $(".tab-pane").each(function(index) {
+            tabContents[index] = this
+        })
+
+        function checkIfChecked(item) {
+            if (!$('input[type="radio"][name=' + item + ']:checked').length) {
+                $('#error-message').text('Please select one')
+                isValid = false;
+            } else {
+                $('#error-message').empty()
+                isValid = true;
+            }
+        }
+
+        function checkIfNumber(item) {
+            if (!$('select[name=' + item + ']').val()) {
+              console.log(item)
+                $('#error-message').text('Please enter a number')
+                isValid = false;
+            } else {
+                $('#error-message').empty()
+                isValid = true;
+            }
+        }
+
+        $('#rootwizard').bootstrapWizard({
+            onNext: function(tab, navigation, index) {
+                var nextIndex = index - 1
+                $(tabContents[nextIndex]).find(":input").each(function() {
+                    if ($(this).is(':radio')) {
+                        var radioName = $(this).attr('name');
+                        checkIfChecked(radioName)
+                    } else {
+                        var numberName = $(this).attr('name');
+                        checkIfNumber(numberName)
+                    }
+
+                });
+
+            },
+            onPrevious: function(tab, navigation, index) {
+                $('#error-message').empty();
+            },
+            onTabShow: function(tab, navigation, index) {
+                var $total = navigation.find('li').length;
+                var $current = index + 1;
+                var $percent = ($current / $total) * 100;
+                $('#rootwizard .progress-bar').css({
+                    width: $percent + '%'
+                });
+            }
+        });
+
+
+
+        //form submission
+
+        $('#rootwizard .finish').click(function(e) {
+            var form = $('#questions-form');
+            var formData = $(form).serializeArray();
+            $('.shell-container').empty();
+            $('.shell-container').append('<div style="text-align: center;margin-top: 10em;margin-bottom: 10em;"><i class="fa fa-spinner fa-spin" style="font-size: 100px;color:#488b08"></i></div>')
+            $.ajax({
+                url: "/form/get-started/risk-submission",
+                data: formData,
+                type: 'POST',
+                success: function(response) {
+                    if (response == "success") {
+                        location.href = "/get-plan"
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+{% include 'modules/analytics.html' %}

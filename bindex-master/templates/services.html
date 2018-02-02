@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'modules/head.html' %}
+
+<body>
+    <main>
+
+
+        {% include 'modules/header.html' %}
+
+        <section class="container g-pt-100 g-pb-40">
+            <div class="row">
+                <div class="col-lg-6 g-mb-60">
+                    <div class="mb-4">
+                        <h2 class="h3 text-uppercase mb-3">Manage Your Portfolio</h2>
+                        <div class="g-width-60 g-height-1 g-bg-black"></div>
+                    </div>
+                    <div class="mb-5">
+                        <p>Bindex Fund's dashboard allows you to track the metrics of your portfolio, compare against other market assets and buy/sell shares of your Bindex.</p>
+                        <!-- <p>As creatives, it's important that I strive to do work outside of obligation. This lets us stay ahead of the curve for our clients and internal projects.</p> -->
+                    </div>
+                    <a class="btn btn-xl u-btn-outline-black g-font-size-default mr-2" href="/funds">Learn more</a>
+                    <a class="btn btn-xl u-btn-primary g-font-size-default" href="/get-started">Become an Investor</a>
+                </div>
+
+                <div class="col-lg-6 g-mb-60">
+                    <div class="embed-responsive">
+                        <img style="width:100%" src="../static/img/bg/lcd-monitor-example.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        {% include 'modules/footer.html' %}
+        <!-- End Footer -->
+
+    </main>
+
+    <div class="u-outer-spaces-helper"></div>
+
+
+    {% include 'modules/foot.html' %}
+
+</body>
+
+</html>

@@ -1,0 +1,194 @@
+html {
+  font-size: 12px;
+}
+
+body {
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga", "kern";
+  text-rendering: optimizelegibility;
+  background-color: #fff;
+}
+ul {
+    list-style-type: none;
+}
+li.previous {
+    float: left;
+}
+li.next,
+li.finish {
+    float: left;
+}
+li.next>a,
+li.previous>a,
+li.finish>a {
+    font-size: 12px;
+    border-radius: 0px !important;
+    margin-left: .5em;
+}
+.hidden {
+    display: none;
+}
+.pager.wizard {
+    /* border-top: 1px solid #ddd; */
+
+    padding: 15px 5px;
+}
+.tab-pane {
+    display: block;
+    width: 100%;
+    min-height: 200px;
+    margin-bottom: 12px;
+    overflow: inherit;
+}
+.navbar {
+    position: absolute !important;
+    visibility: hidden;
+}
+#wizard {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+.question-title {
+    font-size: 18px;
+}
+.spacing-question {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 13px;
+    padding-bottom: 0.4rem;
+}
+.spacing-option {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-bottom: 1rem;
+}
+.option-text {
+    display: inline-block;
+    font-size: 14px;
+    padding-left: .8em;
+}
+.muted-text {
+    color: #999;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.menu-navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 101;
+    background-color: white;
+}
+.login-button {}
+.nav>li>a:hover,
+.nav>li>a:focus {
+    text-decoration: none !important;
+    background-color: white !important;
+}
+.g-width-150 {
+    width: 150px !important;
+    padding-bottom: 2em;
+}
+.wizard-header {
+    margin: 45px 0 20px;
+}
+.sub-menu {
+    overflow: auto;
+    background-color: #f6f6f6;
+    padding-top: 1em;
+    /* float: left; */
+
+    padding-left: 8%;
+    margin-left: -300vw;
+    padding-left: 300vw;
+    margin-right: -300vw;
+    padding-right: 300vw;
+}
+#error-message {
+    text-align: left;
+    padding-bottom: 1em;
+    font-size: 12px;
+    color: red;
+}
+canvas {
+    height: 300px !important;
+    width: 100% !important;
+}
+label {
+  font-weight: 400 !important;
+  cursor:pointer !important;
+}
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px; /* Adjusts for spacing */
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.pager .next>a:hover, .pager .next>a:focus {
+  color: white!important;
+  background-color: #488b08 !important;
+}
+
+.pager .next>a, .pager .next>span {
+  background-color: #055b9a !important;
+  color: white !important;
+}
+@media (max-width: 1000px) {
+  #wizard {
+    width:80% !important;
+  }
+  .middle-button-cta-plan {
+    margin-top: 4em;
+    margin-bottom: 3em;
+  }
+  .sub-shell-plan {
+    text-align: center;
+    margin-top: 2em !important;
+    margin-bottom: -4em;
+  }
+}
+.sub-text-plan {
+  color: #5a5a5a;
+  font-size: 15px;
+  font-weight:600px;
+}
+
+.sub-shell-plan {
+  text-align: center;
+  margin-top: 8em;
+  margin-bottom: -4em;
+}
+
+input[type=radio], input[type=checkbox] {
+    margin: 4px 0 0 !important;
+    margin-top: 1px \9;
+    line-height: normal;
+    margin-right: 5px !important;
+}
+.close {
+  margin-top:-1em !important;
+}

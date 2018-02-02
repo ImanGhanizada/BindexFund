@@ -1,0 +1,322 @@
+{% include 'modules/onboarding-head.html' %}
+
+<body>
+    <main>
+
+        <nav class="menu-navbar">
+            <div class="container">
+                <ul class="nav navbar-nav" style="width:100%">
+                    <li class="active">
+                        <a href="/" class="navbar-brand">
+                            <img style="width: 150px !important;height: auto;" src="../static/img/logo/logo-word-full.png">
+                        </a>
+                    </li>
+                    <li style="float:right">
+                        <a href="http://admin.bindexfund.com">
+                            <button style="border-radius: 0px;background-color: #428bca;border-color: #357ebd;background-color: rgb(2, 91, 154);" type="button" class="btn btn-primary">Login</button>
+                        </a>
+                    </li>
+                </ul>
+                <div class="sub-menu">
+                    <p style="font-size:11px; padding-left:12px"><a style="color:inherit" href="/get-started">Introduce Yourself</a> > <strong>Get Your Plan</strong> > Open Your Account</p>
+
+                </div>
+                <!-- <ul class="nav navbar-nav navbar-right login-button">
+                        <li><a href="/">Default</a></li>
+                    </ul> -->
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
+        <!-- <div class="sub-menu">
+          Assess Your Risk Tolerance > View Your Plan > Open Account
+        </div> -->
+        <!-- <section style="padding-top:3em" style='background-image: url("../static/img/bg/header-bg.png"); height: calc(100vh - 75px);'> -->
+        <section style="padding-top:7em">
+            <div class="container g-z-index-1">
+                <div class="shell-container">
+                    <div class="sub-shell-plan">
+                        <div style="color: #5a5a5a;font-size: 20px;">Based on your answers, here is your personal crypto investment plan</div>
+                        <p>Click each bar to learn about the coin and why we chose it</p>
+                    </div>
+                    <div style="width: 100%; height: 300px text-align: center;margin-top: 7em;margin-bottom: 3em;">
+                        <canvas id="bar-chart"></canvas>
+                    </div>
+                    <div class="row">
+                        <hr>
+                        <div class="col-md-4">
+                            <a href="/get-started">
+                                <div style="float:left" class="sub-text-plan">
+                                    <&nbsp; Change my answers</div>
+                            </a>
+                            </div>
+                            <div class="col-md-4 middle-button-cta-plan">
+                                <a data-target="#investModal" data-toggle="modal" href="#">
+                                    <button style="
+                                      margin-left:auto;
+                                      margin-right:auto;
+                                      display:block;
+                                      border-radius: 0px;
+                                      background-color: #428bca;
+                                      border-color: #357ebd;
+                                      background-color: rgb(2, 91, 154);"
+                                    type="button" class="btn btn-primary">Looks great! Let's start investing</button>
+                                </a>
+                            </div>
+                            <div class="col-md-4">
+                              <a data-target="#planModal" data-toggle="modal" href="#">
+                                  <div style="float:right" class="sub-text-plan">
+                                      Save my results and continue later
+                                  </div>
+                              </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% include 'modules/footer.html' %}
+
+    </main>
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="../static/js/charts.js"></script>
+
+<!-- <script src="http://vinceg.github.io/twitter-bootstrap-wizard/bootstrap/js/bootstrap.min.js"></script> -->
+<script src="../static/vendor/bootstrap/bootstrap-3.3.js"></script>
+<script src="../static/vendor/popper.min.js"></script>
+<!-- <script src="../static/js/getStarted.js"></script> -->
+
+</html>
+
+<div id="coinModalPlaceholder"></div>
+<div class="modal fade" id="planModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="text-align:center">Take your time</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+            </div>
+            <div class="modal-body">
+                <h5 style="text-align: center;padding-bottom: 1em;">We'll email your personal crypto investment plan so you can review on your own time or get advice before registering.</h5>
+                <div id="mc_embed_signup">
+                    <form action="https://bindexfund.us17.list-manage.com/subscribe/post?u=6b6686d9b7fbc45efc5877d90&amp;id=2ddfe001c7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                            <div class="row">
+                                <div class=" form-group col-md-8">
+                                    <input style="height:2.7em" type="email" value="" placeholder="Email Address" name="EMAIL" class="form-control signup-form" id="mce-EMAIL">
+                                </div>
+                                <div class=" form-group col-md-4">
+                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6b6686d9b7fbc45efc5877d90_2ddfe001c7" tabindex="-1" value=""></div>
+                                    <div class="clear">
+                                        <input type="submit" style="cursor:pointer" value="Send It" name="subscribe" id="" class="btn btn-md u-btn-primary g-mr-10 g-mb-15">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% include 'modules/invest-modal.html' %}
+
+
+<script>
+    $(document).ready(function() {
+        $('#planModal').modal('toggle');
+
+        var planJSON = JSON.parse('{{ planData | tojson | safe}}');
+
+        var planLabels = new Array()
+        var planData = new Array()
+        var planDescriptions = new Array()
+
+        $(planJSON).each(function(key, value) {
+            planLabels.push(this['symbol'])
+            planData.push( (parseFloat(this['percent']) * 100).toFixed(2) )
+            planDescriptions.push(this['description'])
+        });
+
+        console.log(planJSON);
+
+
+        // Bar chart
+        var canvas = document.getElementById("bar-chart");
+        var ctx = canvas.getContext("2d");
+
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: planLabels,
+                descriptions:planDescriptions,
+                datasets: [{
+                    label: '%',
+                    data: planData,
+                    backgroundColor: [
+                        "rgba(249, 75, 111, 0.2)",
+                        "rgba(247, 167, 87, 0.2)",
+                        "rgba(205, 246, 89, 0.2)",
+                        "rgba(148, 247, 88, 0.2)",
+                        "rgba(87, 249, 191, 0.2)",
+                        "rgba(92, 219, 247, 0.2)",
+                        "rgba(102, 89, 245, 0.2)",
+                        "rgba(223, 101, 244, 0.2)",
+                        "rgba(250, 109, 198, 0.2)",
+                        "rgba(249, 109, 118, 0.2)"
+                    ],
+                    borderColor: [
+                        "rgb(255, 0, 54)",
+                        "rgb(255, 128, 0)",
+                        "rgb(189, 255, 0)",
+                        "rgb(97, 255, 0)",
+                        "rgb(54, 235, 170)",
+                        "rgb(0, 208, 255)",
+                        "rgb(20, 0, 255)",
+                        "rgb(219, 0, 255)",
+                        "rgb(255, 85, 192)",
+                        "rgb(255, 0, 15)"
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            display: false
+                        },
+                        ticks: {
+                            display: false
+                        }
+                    }]
+                },
+                hover: {
+                    onHover: function(e, el) {
+                        $("#bar-chart").css("cursor", el[0] ? "pointer" : "default");
+                    }
+                },
+                legend: {
+                    display: false
+                },
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        //end charts
+        canvas.onclick = function(evt) {
+            var activePoints = myChart.getElementsAtEvent(evt);
+            if (activePoints[0]) {
+                var chartData = activePoints[0]['_chart'].config.data;
+                var idx = activePoints[0]['_index'];
+
+                var label = chartData.labels[idx];
+                var descriptions = chartData.descriptions[idx]
+                var value = chartData.datasets[0].data[idx];
+
+                var modalID = 'coinModal-'+label
+
+                invokeCoinModal(modalID, label, value, descriptions, 'reason');
+
+            }
+        };
+
+        function invokeCoinModal(modalID, coin, value, descriptions, reason){
+          var html = `
+          <div class="modal fade" id=`+modalID+` tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" style="text-align:center">`+coin+`</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                   </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row" style="padding:1em">
+                        <div class="col-md-6">
+                          <h4 style="text-align:center"> About `+coin+`</h4>
+                          <p style="font-size:14px;padding-top:1em;">`+descriptions+`</p>
+                        </div>
+                        <div style = "text-align:center" class="col-md-6">
+                        <h4 style="text-align:center"> Your fund breakdown </h4>
+                        <div style="width: 100%; height: 300px text-align: center;">
+                          <canvas id="donut-chart-`+coin+`"></canvas>
+                          <p>Allocation:%`+value+`</p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          `
+            $('#coinModalPlaceholder').append(html);
+
+            var coin_canvas = document.getElementById('donut-chart-'+coin );
+            var coin_ctx = coin_canvas.getContext("2d");
+
+            var oilData = {
+                "labels": planLabels,
+                "datasets": [{
+                    "label": '%',
+                    "data": planData,
+                    "backgroundColor": [
+                      "rgba(249, 75, 111, 0.2)",
+                      "rgba(247, 167, 87, 0.2)",
+                      "rgba(205, 246, 89, 0.2)",
+                      "rgba(148, 247, 88, 0.2)",
+                      "rgba(87, 249, 191, 0.2)",
+                      "rgba(92, 219, 247, 0.2)",
+                      "rgba(102, 89, 245, 0.2)",
+                      "rgba(223, 101, 244, 0.2)",
+                      "rgba(250, 109, 198, 0.2)",
+                      "rgba(249, 109, 118, 0.2)"
+                    ]
+                }]
+            }
+
+            var myDoughnutChart = new Chart(coin_ctx, {
+              type: 'doughnut',
+              data: oilData,
+              options:{
+                legend: {
+                    display: false
+                },
+                responsive: true,
+                maintainAspectRatio: false
+              }
+            });
+
+            var indexCoin = planLabels.indexOf(coin)
+
+            myDoughnutChart.data.datasets[0].backgroundColor[indexCoin] = '#222222';
+
+
+            $("#coinModal-"+coin).modal('toggle');
+        }
+
+
+    });
+</script>
+
+
+{% include 'modules/analytics.html' %}
