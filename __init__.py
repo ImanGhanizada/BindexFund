@@ -2,10 +2,10 @@ from flask import Flask, flash, render_template, request, jsonify, redirect, mak
 from jinja2 import Template
 import time
 
-from objects.WebScrapers import WebScrapers
-from objects.MarketData import MarketData
-from objects.MarketTrade import MarketTrade
-from objects.Utilities import Utilities
+#from objects.WebScrapers import WebScrapers
+#from objects.MarketData import MarketData
+#from objects.MarketTrade import MarketTrade
+'''from objects.Utilities import Utilities
 from objects.Database import db_session
 from objects.Mailer import Mailer
 from objects.Slack import Slack
@@ -18,10 +18,13 @@ markettrade = MarketTrade()
 mailer = Mailer()
 slack = Slack()
 getstarted = GetStarted()
+'''
 
+'''
 if util.getMode() == 'live':
     ##run CRON script
     import objects.cron
+'''
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -71,7 +74,7 @@ def getStartedRiskSubmission():
     session['riskForm'] = request.form.to_dict()
 
     return 'success'
-
+'''
 @app.route('/api/v1/get-calculation', methods=['GET'])
 def getCalculation():
     amount = request.args.get('amount', default=1, type=int)
@@ -79,7 +82,9 @@ def getCalculation():
     response = marketdata.getCalculation(amount)
 
     return str(response)
+'''
 
+'''
 @app.route('/api/v1/get-historical-data', methods=['GET'])
 def getHistoricalData():
     search = request.args.get('search', default='BTC,XRP,ETH', type=str)
@@ -90,6 +95,8 @@ def getHistoricalData():
     historicalData = marketdata.historicalData(time, items)
 
     return jsonify(historicalData)
+
+'''
 
 @app.route('/api/v1/get-bindex-data', methods=['GET'])
 def getBindexData():
@@ -115,13 +122,14 @@ def format_currency(value):
 @app.teardown_appcontext
 def shutdown_session(exception=None):
     db_session.remove()
-
+'''
 if util.getMode() == 'live':
     @app.errorhandler(Exception)
     def exception_handler(error):
         mailer.sendError(repr(error))
         # slack.notify("500 error " + str(repr(error)))
         return "Error! Please email 'ethan (at) bindexfund (dot) com'"
+'''
 
 @app.errorhandler(404)
 def page_not_found(e):
