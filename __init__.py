@@ -119,9 +119,13 @@ def format_currency(value):
     value = float(value)
     return "${:,.2f}".format(value)
 
+'''
 @app.teardown_appcontext
 def shutdown_session(exception=None):
     db_session.remove()
+'''
+
+
 '''
 if util.getMode() == 'live':
     @app.errorhandler(Exception)
